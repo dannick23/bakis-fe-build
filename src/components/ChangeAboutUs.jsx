@@ -18,7 +18,7 @@ function ChangeAboutUs() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const response = await axios.post(
-      `{process.env.BE_HOST}/system/${system}/change-about-us`,
+      `https://bakis-be.herokuapp.com/system/${system}/change-about-us`,
       newText,
       {
         headers: {

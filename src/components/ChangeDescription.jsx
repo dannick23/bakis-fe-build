@@ -19,7 +19,7 @@ function ChangeDescription() {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `{process.env.BE_HOST}/system/${system}/change-description`,
+        `https://bakis-be.herokuapp.com/system/${system}/change-description`,
         { description: newText },
         {
           headers: {

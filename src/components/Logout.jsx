@@ -14,7 +14,7 @@ const Logout = () => {
   const logoutApi = async () => {
     try {
       const response = await axios.post(
-        `{process.env.BE_HOST}/user/${system}/logout`,
+        `https://bakis-be.herokuapp.com/user/${system}/logout`,
         null,
         {
           headers: {

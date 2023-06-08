@@ -23,7 +23,7 @@ function PhotoCollage() {
 
       const fetchedDescription = await fetchDescription(system);
       console.log(util.inspect(fetchedDescription, false, null, true));
-      setDescription(fetchDescription && fetchedDescription.description);
+      setDescription(fetchedDescription && fetchedDescription.description);
     };
     fetchImagesAndDescription();
   }, [system]);
@@ -37,7 +37,7 @@ function PhotoCollage() {
               {" "}
               <Card.Img
                 variant="top"
-                src={`{process.env.BE_HOST}/system/${system}/get-image/${image.id}`}
+                src={`https://bakis-be.herokuapp.com/system/${system}/get-image/${image.id}`}
               />
               <Card.Body className="d-flex flex-column">
                 {" "}

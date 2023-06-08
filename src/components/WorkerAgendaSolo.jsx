@@ -83,7 +83,7 @@ const WorkerCalendar = ({ worker }) => {
 
       try {
         const response = axios.delete(
-          `{process.env.BE_HOST}/registration/${system}/booking/${email}/${moment(
+          `https://bakis-be.herokuapp.com/registration/${system}/booking/${email}/${moment(
             timeFrom
           ).format("YYYY-MM-DDTHH:mm:ss")}/${moment(timeTo).format(
             "YYYY-MM-DDTHH:mm:ss"

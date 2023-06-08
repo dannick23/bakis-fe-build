@@ -3,7 +3,7 @@ import axios from "axios";
 export const fetchWorkersFromServer = async (system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/all-workers`
+      `https://bakis-be.herokuapp.com/system/${system}/all-workers`
     );
     if (response.status === 200) {
       console.log("Workers fetched successfully");
@@ -21,7 +21,7 @@ export const fetchWorkersFromServer = async (system) => {
 export const fetchShiftTimes = async (email, system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/registration/${system}/worker-shift/${email}`
+      `https://bakis-be.herokuapp.com/registration/${system}/worker-shift/${email}`
     );
     if (response.status === 200) {
       console.log("Workers shifts fetched successfully");
@@ -39,7 +39,7 @@ export const fetchShiftTimes = async (email, system) => {
 export const fetchBookedTimes = async (email, system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/registration/${system}/worker-booked-shift/${email}`
+      `https://bakis-be.herokuapp.com/registration/${system}/worker-booked-shift/${email}`
     );
     if (response.status === 200) {
       console.log("Workers booked shifts fetched successfully");
@@ -56,7 +56,7 @@ export const fetchBookedTimes = async (email, system) => {
 export const fetchAppointments = async (email, system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/registration/${system}/all-registrations/${email}`
+      `https://bakis-be.herokuapp.com/registration/${system}/all-registrations/${email}`
     );
     if (response.status === 200) {
       console.log("Worker's registrations fetched successfully");
@@ -73,7 +73,7 @@ export const fetchAppointments = async (email, system) => {
 export const fetchSettings = async (system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/get-settings`
+      `https://bakis-be.herokuapp.com/system/${system}/get-settings`
     );
     if (response.status === 200) {
       console.log("System settings fetched successfully");
@@ -90,7 +90,7 @@ export const fetchSettings = async (system) => {
 export const fetchRegistrations = async (system, email, day) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/registration/${system}/all-registrations/${email}/${day}`
+      `https://bakis-be.herokuapp.com/registration/${system}/all-registrations/${email}/${day}`
     );
     if (response.status === 200) {
       console.log("Day registrations fetched successfully");

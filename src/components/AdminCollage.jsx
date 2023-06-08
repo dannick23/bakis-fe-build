@@ -29,7 +29,7 @@ const AdminCollage = () => {
 
   const handleDelete = async (id) => {
     await axios.delete(
-      `{process.env.BE_HOST}/system/${system}/delete-image/${id}`,
+      `https://bakis-be.herokuapp.com/system/${system}/delete-image/${id}`,
       {
         headers: {
           Authorization: authHeader(),
@@ -53,7 +53,7 @@ const AdminCollage = () => {
             >
               <Card.Img
                 variant="top"
-                src={`{process.env.BE_HOST}/system/${system}/get-image/${image.id}`}
+                src={`https://bakis-be.herokuapp.com/system/${system}/get-image/${image.id}`}
                 onClick={() => handleClickImage(image.id)}
                 className={selectedIds.includes(image.id) ? "opacity-50" : ""}
               />

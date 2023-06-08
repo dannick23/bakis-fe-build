@@ -7,7 +7,7 @@ export const fetchImageIds = async (system) => {
       util.inspect(system, false, null, SVGComponentTransferFunctionElement)
     );
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/get-all-images`,
+      `https://bakis-be.herokuapp.com/system/${system}/get-all-images`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const fetchUserData = async (email, system, authHeader) => {
     console.log("Inside fethcUserData");
     console.log(util.inspect(authHeader, false, null, true));
     const response = await axios.get(
-      `{process.env.BE_HOST}/user/${system}/get-user-details/${email}`,
+      `https://bakis-be.herokuapp.com/user/${system}/get-user-details/${email}`,
       {
         headers: {
           Authorization: authHeader,
@@ -63,7 +63,7 @@ export const createRegistration = async (
   try {
     console.log(util.inspect(data, false, null, true));
     const response = await axios.post(
-      `{process.env.BE_HOST}/registration/${system}/new`,
+      `https://bakis-be.herokuapp.com/registration/${system}/new`,
       {
         firstName: data.firstName,
         lastName: data.lastName,
@@ -96,7 +96,7 @@ export const createRegistration = async (
 export const uploadFile = async (formData, system, authHeader) => {
   try {
     const response = await axios.post(
-      `{process.env.BE_HOST}/system/${system}/add-image`,
+      `https://bakis-be.herokuapp.com/system/${system}/add-image`,
       formData,
       {
         headers: {
@@ -115,7 +115,7 @@ export const uploadFile = async (formData, system, authHeader) => {
 export const fetchAboutUs = async (system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/get-about-us`,
+      `https://bakis-be.herokuapp.com/system/${system}/get-about-us`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -138,7 +138,7 @@ export const fetchAboutUs = async (system) => {
 export const fetchContactUs = async (system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/get-contact-us`,
+      `https://bakis-be.herokuapp.com/system/${system}/get-contact-us`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -161,7 +161,7 @@ export const fetchContactUs = async (system) => {
 export const fetchDescription = async (system) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/system/${system}/get-description`,
+      `https://bakis-be.herokuapp.com/system/${system}/get-description`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -190,7 +190,7 @@ export const fetchRegistrationData = async (
 ) => {
   try {
     const response = await axios.get(
-      `{process.env.BE_HOST}/registration/${system}/booking/${email}/${from}/${to}`,
+      `https://bakis-be.herokuapp.com/registration/${system}/booking/${email}/${from}/${to}`,
       {
         headers: {
           "Content-Type": "application/json",

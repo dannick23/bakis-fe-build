@@ -37,7 +37,7 @@ function SystemSetter() {
 
       try {
         const response = await axios.post(
-          `{process.env.BE_HOST}/user/${system}/validate-token`,
+          `https://bakis-be.herokuapp.com/user/${system}/validate-token`,
           null,
           {
             headers: { Authorization: authHeader() },

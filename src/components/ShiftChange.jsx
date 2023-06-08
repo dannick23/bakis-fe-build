@@ -19,7 +19,7 @@ const ShiftChange = () => {
     const fetchWorkers = async () => {
       try {
         const response = await axios.get(
-          `{process.env.BE_HOST}/system/${system}/all-workers`,
+          `https://bakis-be.herokuapp.com/system/${system}/all-workers`,
           {
             headers: { Authorization: authHeader() },
           }
@@ -44,7 +44,7 @@ const ShiftChange = () => {
     event.preventDefault();
     try {
       const response = await axios.post(
-        `{process.env.BE_HOST}/worker/${system}/change-shift/${selectedWorkerEmail}`,
+        `https://bakis-be.herokuapp.com/worker/${system}/change-shift/${selectedWorkerEmail}`,
         shiftDetails,
         { headers: { Authorization: authHeader() } }
       );

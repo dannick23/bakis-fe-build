@@ -15,7 +15,7 @@ const UnconfirmedWorkers = () => {
     const fetchUnconfirmedWorkers = async () => {
       try {
         const response = await axios.get(
-          `{process.env.BE_HOST}/user/${system}/unconfirmed-workers`,
+          `https://bakis-be.herokuapp.com/user/${system}/unconfirmed-workers`,
           {
             headers: { Authorization: authHeader() },
           }
@@ -31,7 +31,7 @@ const UnconfirmedWorkers = () => {
   const confirmWorker = async (workerEmail) => {
     try {
       await axios.post(
-        `{process.env.BE_HOST}/user/${system}/confirm-worker/${workerEmail}`,
+        `https://bakis-be.herokuapp.com/user/${system}/confirm-worker/${workerEmail}`,
         {},
         {
           headers: { Authorization: authHeader() },

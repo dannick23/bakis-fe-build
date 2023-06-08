@@ -35,7 +35,7 @@ const LoginForm = () => {
 
     try {
       const response = await axios.post(
-        `{process.env.BE_HOST}/user/${system}/login`,
+        `https://bakis-be.herokuapp.com/user/${system}/login`,
         data,
         {
           headers: {

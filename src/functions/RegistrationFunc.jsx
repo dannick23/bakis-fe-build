@@ -3,7 +3,7 @@ import axios from "axios";
 export async function submitData(data, system) {
   try {
     const response = await axios.post(
-      `{process.env.BE_HOST}/user/${system}/new`,
+      `https://bakis-be.herokuapp.com/user/${system}/new`,
       data,
       {
         headers: {
