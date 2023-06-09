@@ -40,7 +40,7 @@ const LoginForm = () => {
         {
           headers: {
             "Content-Type": "application/json"
-          },
+          }
         }
       );
       const userDetails = response.data;

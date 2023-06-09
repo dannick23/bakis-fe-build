@@ -11,7 +11,7 @@ export const fetchImageIds = async (system) => {
       {
         headers: {
           "Content-Type": "application/json"
-        },
+        }
       }
     );
     if (response.status === 200) {
@@ -77,7 +77,7 @@ export const createRegistration = async (
         headers: {
           "Content-Type": "application/json",
           Authorization: authHeader
-        },
+        }
       }
     );
     if (response.status === 200) {
@@ -119,7 +119,7 @@ export const fetchAboutUs = async (system) => {
       {
         headers: {
           "Content-Type": "application/json"
-        },
+        }
       }
     );
     if (response.status === 200) {
@@ -142,7 +142,7 @@ export const fetchContactUs = async (system) => {
       {
         headers: {
           "Content-Type": "application/json"
-        },
+        }
       }
     );
     if (response.status === 200) {
@@ -165,7 +165,7 @@ export const fetchDescription = async (system) => {
       {
         headers: {
           "Content-Type": "application/json"
-        },
+        }
       }
     );
     if (response.status === 200) {
@@ -195,7 +195,7 @@ export const fetchRegistrationData = async (
         headers: {
           "Content-Type": "application/json",
           Authorization: authHeader
-        },
+        }
       }
     );
     if (response.status === 200) {

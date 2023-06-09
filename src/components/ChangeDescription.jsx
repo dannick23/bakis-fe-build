@@ -25,7 +25,7 @@ function ChangeDescription() {
           headers: {
             "Content-Type": "application/json",
             Authorization: authHeader()
-          },
+          }
         }
       );
       console.log(response.data);

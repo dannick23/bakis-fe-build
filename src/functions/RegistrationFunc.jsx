@@ -8,7 +8,7 @@ export async function submitData(data, system) {
       {
         headers: {
           "Content-Type": "application/json"
-        },
+        }
       }
     );
 
