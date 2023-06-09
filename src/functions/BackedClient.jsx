@@ -10,7 +10,7 @@ export const fetchImageIds = async (system) => {
       `https://bakis-be.herokuapp.com/system/${system}/get-all-images`,
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
       }
     );
@@ -76,7 +76,7 @@ export const createRegistration = async (
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: authHeader,
+          Authorization: authHeader
         },
       }
     );
@@ -118,7 +118,7 @@ export const fetchAboutUs = async (system) => {
       `https://bakis-be.herokuapp.com/system/${system}/get-about-us`,
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
       }
     );
@@ -141,7 +141,7 @@ export const fetchContactUs = async (system) => {
       `https://bakis-be.herokuapp.com/system/${system}/get-contact-us`,
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
       }
     );
@@ -164,7 +164,7 @@ export const fetchDescription = async (system) => {
       `https://bakis-be.herokuapp.com/system/${system}/get-description`,
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
       }
     );
@@ -194,7 +194,7 @@ export const fetchRegistrationData = async (
       {
         headers: {
           "Content-Type": "application/json",
-          Authorization: authHeader,
+          Authorization: authHeader
         },
       }
     );

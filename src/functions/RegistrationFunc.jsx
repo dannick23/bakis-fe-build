@@ -7,7 +7,7 @@ export async function submitData(data, system) {
       data,
       {
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
       }
     );
